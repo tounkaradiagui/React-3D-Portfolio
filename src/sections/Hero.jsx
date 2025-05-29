@@ -1,4 +1,5 @@
 import Button from "../components/Button"
+import HeroExperience from "../components/HeroModels/HeroExperience"
 import { words } from "../constants"
 
 const Hero = () => {
@@ -31,7 +32,7 @@ const Hero = () => {
                         <h1>That Deliver Results</h1>
                     </div>
                     <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                       Salut, je suis Diagui TOUNKARA Codeur créatif, amoureux du clean design et du code efficace. Je conçois des expériences digitales qui allient esthétique et performance.
+                       Salut, je suis Diagui TOUNKARA Codeur créatif, amoureux du clean design et du code efficace.
                     </p>
                     {/* Button component */}
                     <Button
@@ -44,6 +45,11 @@ const Hero = () => {
             </header>
 
             {/* Hero Model */}
+            <figure>
+                <div className="hero-3d-layout">
+                    <HeroExperience />  
+                </div>
+            </figure>
         </div>
       
     </section>
