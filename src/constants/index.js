@@ -33,7 +33,7 @@ const counterItems = [
   { value: 10, suffix: "+", label: "Clients Satisfaits" },
   { value: 20, suffix: "+", label: "Projets Réalisés" },
   { value: 99, suffix: "%", label: "Satisfaction Client" },
-  { value: 5, suffix: "+", label: "Technologies Maîtrisées" },
+  // { value: 5, suffix: "+", label: "Technologies Maîtrisées" },
 ];
 
 const logoIconsList = [
