@@ -1,12 +1,3 @@
-// export const words = [
-//     // {text: 'Full Stack 🔴', imagePath: '/images/ideas.svg'},
-//     // {text: 'MERN STACK', imagePath: '/images/ideas.svg'},
-//     // {text: 'Laravel🔴', imagePath: '/images/ideas.svg'},
-//     {text: 'Ideas', imagePath: '/images/ideas.svg'},
-//     {text: 'Concepts', imagePath: '/images/concepts.svg'},
-//     {text: 'Designs', imagePath: '/images/designs.svg'},
-//     {text: 'Code', imagePath: '/images/code.svg'},
-// ]
 const navLinks = [
   {
     name: "Work",
@@ -27,21 +18,22 @@ const navLinks = [
 ];
 
 const words = [
-  { text: "Ideas", imagePath: "/images/ideas.svg" },
-  { text: "Concepts", imagePath: "/images/concepts.svg" },
-  { text: "Designs", imagePath: "/images/designs.svg" },
-  { text: "Code", imagePath: "/images/code.svg" },
-  { text: "Ideas", imagePath: "/images/ideas.svg" },
-  { text: "Concepts", imagePath: "/images/concepts.svg" },
-  { text: "Designs", imagePath: "/images/designs.svg" },
-  { text: "Code", imagePath: "/images/code.svg" },
+  { text: "des Idées", imagePath: "/images/ideas.svg" },
+  { text: "des Concepts", imagePath: "/images/concepts.svg" },
+  { text: "des Designs", imagePath: "/images/designs.svg" },
+  { text: "du Code", imagePath: "/images/code.svg" },
+  // { text: "des Projets", imagePath: "/images/projects.svg" },
+  // { text: "des Résultats", imagePath: "/images/results.svg" },
+  // { text: "des Solutions", imagePath: "/images/solutions.svg" },
+  // { text: "des Expériences", imagePath: "/images/experiences.svg" },
 ];
 
 const counterItems = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 5, suffix: "+", label: "Années d'Expérience" },
+  { value: 10, suffix: "+", label: "Clients Satisfaits" },
+  { value: 20, suffix: "+", label: "Projets Réalisés" },
+  { value: 99, suffix: "%", label: "Satisfaction Client" },
+  { value: 5, suffix: "+", label: "Technologies Maîtrisées" },
 ];
 
 const logoIconsList = [
