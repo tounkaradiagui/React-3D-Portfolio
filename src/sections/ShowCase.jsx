@@ -54,18 +54,20 @@ const ShowCase = () => {
             {/* Image wrapper */}
             <div className="image-wrapper">
               <img
-                src="/images/dashboard.png"
+                src="/images/track.png"
                 alt="Mon Projet"
-                title="Admin Dashborad View"
+                title="Fund Wise - Application mobile de gestion de fonds"
               />
             </div>
             <div className="text-content">
               {/* Project title */}
-              <h2>Projet de gestion des absences</h2>
+              <h2>Application mobile de gestion de fonds</h2>
               {/* Simple description */}
               <p>
-                Un projet de gestion des absences pour les élèves, permettant
-                aux enseignants de suivre les présences et absences des élèves.
+                Fund Wise est une application mobile de gestion de fonds qui
+                permet aux utilisateurs de suivre leurs dépenses, d'analyser
+                leurs habitudes financières et de planifier leur budget de manière
+                efficace.
               </p>
             </div>
           </div>
@@ -84,12 +86,14 @@ const ShowCase = () => {
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
                 <img
-                  src="/images/logout.png"
-                  alt="Application Web de Reservation de Vols"
-                  title="Agence Kingui"
+                  src="/images/dashboard.png"
+                  alt="Dashboard Admin"
+                  title="Admin Dashborad View"
                 />
               </div>
-              <h2>Agence Kingui</h2>
+              <h2>
+                Projet de gestion des absences
+              </h2>
             </div>
           </div>
         </div>

@@ -48,7 +48,7 @@ const Hero = () => {
               <h1>en Projets Réels</h1>
               <h1>qui Produisent des Résultats</h1>
             </div>
-            <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
+            <p className="text-white-50 md:text-l relative z-10 pointer-events-none">
               Salut, je suis Diagui TOUNKARA Codeur créatif, amoureux du clean
               design et du code efficace.
             </p>
