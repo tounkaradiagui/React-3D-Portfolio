@@ -1,12 +1,45 @@
-# React + Vite
+### Diagui Tounkara | Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🌐 Web & Mobile Developer Portfolio
 
-Currently, two official plugins are available:
+Welcome to my interactive portfolio built with modern web technologies!
+This project showcases my skills in frontend development, motion design, and 3D web integration.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🛠️ Tech Stack
+React + Vite: Ultra-fast frontend framework with modern tooling
 
-## Expanding the ESLint configuration
+GSAP (GreenSock Animation Platform): Smooth, timeline-based animations
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Three.js: 3D graphics engine for rendering interactive scenes
+
+Tailwind CSS (optionnel): Utility-first styling for rapid UI development
+
+✨ Features
+🚀 High-performance SPA powered by Vite
+
+🧩 Modular components with clean and scalable architecture
+
+🎯 Interactive animations using GSAP scroll triggers and timelines
+
+🌌 Immersive 3D visuals created with Three.js and WebGL
+
+📱 Responsive design across all screen sizes
+
+📂 Folder Structure
+
+├── public/               # Static assets (3D models, images, etc.)
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── sections/         # Hero, About, Projects, Contact...
+│   ├── constants/        # Textures, icons, navLinks...
+│   └── App.jsx           # App root
+
+🚧 Future Improvements
+
+🌙 Dark mode support for better accessibility
+
+✨ Page transition animations with Framer Motion or GSAP
+
+🔗 Live Demo
+
+👉 Visit Portfolio Website : https://www.devdiagui.com
