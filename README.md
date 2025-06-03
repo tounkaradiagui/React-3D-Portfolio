@@ -25,7 +25,7 @@ Tailwind CSS (optionnel): Utility-first styling for rapid UI development
 
 📱 Responsive design across all screen sizes
 
-🚧 Future Improvements
+🚧 Future Improvements :
 
 🌙 Dark mode support for better accessibility
 
