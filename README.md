@@ -31,6 +31,15 @@ Tailwind CSS (optionnel): Utility-first styling for rapid UI development
 ├── src/
 │   ├── components/       # Reusable UI components
 │   ├── sections/         # Hero, About, Projects, Contact...
+│   ├── assets/           # Textures, icons, shaders
+│   ├── three/            # Three.js configuration & custom shaders
+│   └── App.tsx           # App root
+
+
+├── public/               # Static assets (3D models, images, etc.)
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── sections/         # Hero, About, Projects, Contact...
 │   ├── constants/        # Textures, icons, navLinks...
 │   └── App.jsx           # App root
 
