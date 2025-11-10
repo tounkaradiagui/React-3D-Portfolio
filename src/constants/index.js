@@ -207,68 +207,69 @@ const expLogos = [
 
 const testimonials = [
   {
-    name: "Esther Howard",
-    mentions: "@estherhoward",
+    name: "Ousmane Traoré",
+    mentions: "@ousmanet",
     review:
-      "I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.",
+      "Je ne peux que recommander Diagui. Il a su comprendre nos besoins complexes et les transformer en une interface moderne, fluide et parfaitement fonctionnelle. Sa capacité à résoudre les problèmes et à proposer des solutions élégantes est remarquable.",
     imgPath: "/images/client1.png",
   },
   {
-    name: "Wade Warren",
-    mentions: "@wadewarren",
+    name: "Mariam Djénépo",
+    mentions: "@mariam",
     review:
-      "Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.",
+      "Travailler avec Diagui a été une expérience excellente. Il a entièrement modernisé notre plateforme et amélioré l’expérience utilisateur de manière significative. Son sens du détail et son souci de qualité sont réellement au-dessus de la moyenne. Je le recommande vivement pour tout projet web.",
     imgPath: "/images/client3.png",
   },
   {
-    name: "Guy Hawkins",
-    mentions: "@guyhawkins",
+    name: "Sidy Lamine Diakité",
+    mentions: "@sidy",
     review:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+      "La collaboration avec Diagui a été très fluide. Toujours professionnel, réactif et déterminé à livrer le meilleur résultat possible. Sa passion pour le développement et le design se ressent dans chaque étape du projet. Si vous cherchez à faire évoluer votre site ou votre image digitale, c’est clairement la bonne personne.",
     imgPath: "/images/client2.png",
   },
   {
-    name: "Marvin McKinney",
-    mentions: "@marvinmckinney",
+    name: "Ibrahima Koné",
+    mentions: "@ibrahima",
     review:
-      "Adrian was a pleasure to work with. He turned our outdated website into a fresh, intuitive platform that’s both modern and easy to navigate. Fantastic work overall.",
+      "Diagui a su redonner une nouvelle vie à notre site. Le résultat est à la fois moderne, intuitif, esthétique et très simple à prendre en main. Un travail propre et maîtrisé de bout en bout.",
     imgPath: "/images/client5.png",
   },
   {
-    name: "Floyd Miles",
-    mentions: "@floydmiles",
+    name: "Sanata Fané",
+    mentions: "@sanata",
     review:
-      "Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional!",
+      "L’expertise de Diagui en développement web est vraiment impressionnante. Il nous a livré une solution performante, optimisée et scalable pour notre plateforme e-commerce. Depuis le lancement, nos conversions se sont nettement améliorées. Un vrai professionnel.",
     imgPath: "/images/client4.png",
   },
   {
-    name: "Albert Flores",
-    mentions: "@albertflores",
+    name: "Hamidou Togo",
+    mentions: "@hamidou",
     review:
-      "Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend and backend dev are top-notch.",
+      "Diagui a parfaitement compris nos attentes et a livré bien plus que ce que nous espérions. Que ce soit en frontend ou en backend, il maîtrise son sujet. Son sens de l’UI/UX a vraiment fait la différence.",
     imgPath: "/images/client6.png",
   },
 ];
 
+
 const socialImgs = [
   {
     name: "insta",
-    url: "https://www.instagram.com/",
+    url: "https://www.instagram.com/devdiagui",
     imgPath: "/images/insta.png",
   },
   {
     name: "fb",
-    url: "https://www.facebook.com/",
+    url: "https://www.facebook.com/tounkaradiagui",
     imgPath: "/images/fb.png",
   },
   {
     name: "x",
-    url: "https://www.x.com/",
+    url: "https://www.x.com/dtounkara20",
     imgPath: "/images/x.png",
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/diagui-tounkara-65229b125",
     imgPath: "/images/linkedin.png",
   },
 ];
