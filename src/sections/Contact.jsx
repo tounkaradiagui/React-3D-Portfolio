@@ -1,12 +1,12 @@
 import { useRef, useState } from "react";
-// import emailjs from "@emailjs/browser";
-
 import TitleHeader from "../components/TitleHeader";
-// import ContactExperience from "../components/models/contact/ContactExperience";
 
 const Contact = () => {
+
+  const [status, setStatus] = useState(null); // "success" | "error" | null
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -19,24 +19,29 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    // e.preventDefault();
-    // setLoading(true); // Show loading state
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
 
-    // try {
-    //   await emailjs.sendForm(
-    //     import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-    //     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-    //     formRef.current,
-    //     import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-    //   );
+    try {
+      const res = await fetch("https://devdiagui.com/contact.php", {
+        method: "POST",
+        body: new FormData(formRef.current),
+      });
 
-    //   // Reset form and stop loading
-    //   setForm({ name: "", email: "", message: "" });
-    // } catch (error) {
-    //   console.error("EmailJS Error:", error); // Optional: show toast
-    // } finally {
-    //   setLoading(false); // Always stop loading, even on error
-    // }
+      const text = await res.text();
+
+      if (text === "success") {
+        setStatus("success");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -46,7 +51,22 @@ const Contact = () => {
           title="Let’s Connect"
           sub="💬 Une question ou un projet en tête ? Parlons-en !🚀"
         />
+          
+        <div className="mt-4">
+            {status === "success" && (
+              <p className="text-green-500 text-center animate-bounce">
+                ✅ Message envoyé avec succès !
+              </p>
+            )}
+
+            {status === "error" && (
+              <p className="text-red-500 text-center animate-pulse">
+                ❌ Une erreur s'est produite. Veuillez réessayer.
+              </p>
+            )}
+        </div>
         <div className="grid-12-cols mt-16">
+
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
               <form
@@ -55,7 +75,7 @@ const Contact = () => {
                 className="w-full flex flex-col gap-7"
               >
                 <div>
-                  <label htmlFor="name">Prénom et Nom</label>
+                  <label htmlFor="name">Nom</label>
                   <input
                     type="text"
                     id="name"
@@ -93,11 +113,17 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit">
+                <button type="submit" disabled={loading} className={`${loading ? "opacity-50 cursor-not-allowed" : ""}`}>
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
-                      {loading ? "Envoie en cours..." : "Envoyer"}
+                      {loading ? (
+                        <span className="flex items-center gap-2">
+                          <span className="loader"></span> Envoi...
+                        </span>
+                      ) : (
+                        "Envoyer le message"
+                      )}
                     </p>
                     <div className="arrow-wrapper">
                       <img src="/images/arrow-down.svg" alt="arrow" />
@@ -111,15 +137,15 @@ const Contact = () => {
             <div className="bg-blue-500 w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
               {/* Google maps adresse  */}
               <iframe
-      title="My Location"
-      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Faladié+socoro+Bamako+Mali"
-      width="100%"
-      height="100%"
-      className="border-0"
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
+                title="My Location"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Faladié+socoro+Bamako+Mali"
+                width="100%"
+                height="100%"
+                className="border-0"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
