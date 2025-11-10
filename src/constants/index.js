@@ -96,7 +96,7 @@ const techStackImgs = [
     imgPath: "/images/logos/react.png",
   },
   {
-    name: "Python Developer",
+    name: "Laravel Developer",
     imgPath: "/images/logos/python.svg",
   },
   {
@@ -121,10 +121,11 @@ const techStackIcons = [
     rotation: [0, 0, 0],
   },
   {
-    name: "Python Developer",
-    modelPath: "/models/python-transformed.glb",
-    scale: 0.8,
-    rotation: [0, 0, 0],
+    name: "Laravel Developer",
+    modelPath: "/models/laravel-transformed.glb",
+    scale: 18,
+    // position: [0, -0.3, 0],
+    rotation: [0, -Math.PI / 4, 0],
   },
   {
     name: "Backend Developer",
@@ -158,7 +159,7 @@ const expCards = [
       "Gestion et maintenance d'un site e-commerce développé avec Oxatis.",
       "Optimisation des performances du site pour améliorer l'expérience utilisateur.",
       "Réferencement SEO du site pour améliorer sa visibilité sur les moteurs de recherche.",
-      "Lien du site : https://www.passerelle62.fr/"
+      "Lien du site : https://www.passerelle62.fr/",
     ],
   },
   {
@@ -184,7 +185,7 @@ const expCards = [
     responsibilities: [
       "Développé des applications mobiles multiplateformes en utilisant React Native.",
       "Créé des interfaces utilisateur réactives et intuitives en utilisant React Native et Redux.",
-      "Intégré des services tiers et des API pour enrichir les fonctionnalités de l'application."
+      "Intégré des services tiers et des API pour enrichir les fonctionnalités de l'application.",
     ],
   },
 ];
