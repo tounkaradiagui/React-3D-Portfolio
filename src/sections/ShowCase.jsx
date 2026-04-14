@@ -52,7 +52,7 @@ const ShowCase = () => {
             <div className="image-wrapper">
               <img
                 src="/images/track.png"
-                alt="Mon Projet"
+                alt="Fund wise est application mobile de gestion de finances personelles"
                 title="Fund Wise - Application mobile de gestion de fonds"
               />
             </div>
@@ -91,7 +91,8 @@ const ShowCase = () => {
               <div className="image-wrapper bg-[#f5f5f5]">
                 <img
                   src="/images/popular product.png"
-                  alt="Diagui Shop Web App"
+                  alt="Diagui Shop - Application e-commerce de vêtements, chaussures et appareils électroniques
+                   avec une interface utilisateur élégante et une expérience d'achat fluide."
                   title="Diagui Shop"
                 />
               </div>
@@ -111,8 +112,8 @@ const ShowCase = () => {
               <div className="image-wrapper bg-[#ffe7eb]">
                 <img
                   src="/images/projet_wagadu.png"
-                  alt="Système de Gestion Scolaire avec Suivi des Absences"
-                  title="Admin Dashborad View"
+                  alt="Système de Gestion Scolaire avec Suivi des Absences et des Présences pour les Écoles primaire et secondaire"
+                  title="Tableau de bord administrateur"
                 />
               </div>
               <h2>Projet de gestion des absences.</h2>

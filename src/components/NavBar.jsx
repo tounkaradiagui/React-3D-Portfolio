@@ -9,17 +9,17 @@ const NavBar = () => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
       setScrolled(true);
-      //   if (isScrolled !== scrolled) {
-      //     setScrolled(isScrolled);
-      //   }
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [scrolled]);
   return (
-    <header className={`navbar ${scrolled ? 'scrolled' : 'not-scrolled'}`}>
+    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
         <a href="#hero" className="logo">
           Diagui | Tounkara
