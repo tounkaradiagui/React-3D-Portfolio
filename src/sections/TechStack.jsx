@@ -1,6 +1,6 @@
 import React from "react";
 import TitleHeader from "../components/TitleHeader";
-import { techStackIcons, techStackImgs } from "../constants";
+import { techStackIcons } from "../constants";
 import TechIcons from "../components/Models/TechLogos/TechIcons";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
@@ -20,7 +20,7 @@ const TechStack = () => {
           trigger: "#skills",
           start: "top center",
         },
-      }
+      },
     );
   });
   return (
@@ -42,7 +42,7 @@ const TechStack = () => {
                 <div className="tech-icon-wrapper">
                   <TechIcons model={icon} />
                 </div>
-                <div className="padding-x w-full">
+                <div className="padding-x w-full mb-6">
                   <p>{icon.name}</p>
                 </div>
               </div>
