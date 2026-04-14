@@ -1,9 +1,9 @@
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import TitleHeader from "../components/TitleHeader";
 
 const Contact = () => {
-
-  const [status, setStatus] = useState(null); // "success" | "error" | null
+  const [status, setStatus] = useState(null);
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
@@ -23,21 +23,43 @@ const Contact = () => {
     setLoading(true);
     setStatus(null);
 
+    const sendDate = new Date().toLocaleString("fr-FR", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    const templateParams = {
+      from_name: form.name,
+      from_email: form.email,
+      message: form.message,
+      send_date: sendDate,
+    };
+
     try {
-      const res = await fetch("https://devdiagui.com/contact.php", {
-        method: "POST",
-        body: new FormData(formRef.current),
-      });
+      // Email 1 → Réception
+      await emailjs.send(
+        "service_9ntddyl",
+        "template_r03fooy",
+        templateParams,
+        "_NZhjlfAAGdg38mEJ",
+      );
 
-      const text = await res.text();
+      // Email 2 → confirmation au client
+      await emailjs.send(
+        "service_9ntddyl",
+        "template_0x1a28r",
+        templateParams,
+        "_NZhjlfAAGdg38mEJ",
+      );
 
-      if (text === "success") {
-        setStatus("success");
-        setForm({ name: "", email: "", message: "" });
-      } else {
-        setStatus("error");
-      }
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error("EmailJS error:", error);
       setStatus("error");
     } finally {
       setLoading(false);
@@ -48,25 +70,24 @@ const Contact = () => {
     <section id="contact" className="flex-center section-padding">
       <div className="w-full h-full md:px-10 px-5">
         <TitleHeader
-          title="Let’s Connect"
+          title="Let's Connect"
           sub="💬 Une question ou un projet en tête ? Parlons-en !🚀"
         />
-          
+
         <div className="mt-4">
-            {status === "success" && (
-              <p className="text-green-500 text-center animate-bounce">
-                ✅ Message envoyé avec succès !
-              </p>
-            )}
-
-            {status === "error" && (
-              <p className="text-red-500 text-center animate-pulse">
-                ❌ Une erreur s'est produite. Veuillez réessayer.
-              </p>
-            )}
+          {status === "success" && (
+            <p className="text-green-500 text-center animate-bounce">
+              ✅ Message envoyé avec succès !
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-red-500 text-center animate-pulse">
+              ❌ Une erreur s'est produite. Veuillez réessayer.
+            </p>
+          )}
         </div>
-        <div className="grid-12-cols mt-16">
 
+        <div className="grid-12-cols mt-16">
           <div className="xl:col-span-5">
             <div className="flex-center card-border rounded-xl p-10">
               <form
@@ -113,7 +134,11 @@ const Contact = () => {
                   />
                 </div>
 
-                <button type="submit" disabled={loading} className={`${loading ? "opacity-50 cursor-not-allowed" : ""}`}>
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className={`${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+                >
                   <div className="cta-button group">
                     <div className="bg-circle" />
                     <p className="text">
@@ -133,9 +158,9 @@ const Contact = () => {
               </form>
             </div>
           </div>
+
           <div className="xl:col-span-7 min-h-96">
             <div className="bg-blue-500 w-full h-full hover:cursor-grab rounded-3xl overflow-hidden">
-              {/* Google maps adresse  */}
               <iframe
                 title="My Location"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Faladié+socoro+Bamako+Mali"

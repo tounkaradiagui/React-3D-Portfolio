@@ -11,10 +11,7 @@ const ShowCase = () => {
   const project2Ref = useRef(null);
   const project3Ref = useRef(null);
 
-  
-  
   useGSAP(() => {
-    
     const projects = [
       project1Ref.current,
       project2Ref.current,
@@ -22,26 +19,26 @@ const ShowCase = () => {
     ];
 
     projects.forEach((card, index) => {
-    // Create a staggered animation for each project card
-    gsap.fromTo(
+      // Create a staggered animation for each project card
+      gsap.fromTo(
         card,
         { y: 50, opacity: 0 },
         {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.3 * (index + 1),
-        scrollTrigger: {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.3 * (index + 1),
+          scrollTrigger: {
             trigger: card,
             start: "top bottom-=100",
+          },
         },
-        }
-    );
+      );
     });
     gsap.fromTo(
       sectionRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 1.5 }
+      { opacity: 1, duration: 1.5 },
     );
   }, []);
 
@@ -64,10 +61,27 @@ const ShowCase = () => {
               <h2>Application mobile de gestion de fonds</h2>
               {/* Simple description */}
               <p>
-                Fund Wise est une application mobile de gestion de fonds qui
-                permet aux utilisateurs de suivre leurs dépenses, d'analyser
-                leurs habitudes financières et de planifier leur budget de manière
-                efficace.
+                Fund Wise{" "}
+                <a
+                  href="https://drive.google.com/file/d/1QkyOasaG0PQIyb9GnrViGxs8hxPB2dcj/view?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline-none"
+                >
+                  Telecharger
+                </a>{" "}
+                est une application mobile de gestion de fonds qui permet aux
+                utilisateurs de suivre leurs dépenses, d'analyser leurs
+                habitudes financières et de planifier leur budget de manière
+                efficace.{" "}
+                <a
+                  href="https://github.com/tounkaradiagui/Track_Finances"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline-none"
+                >
+                  Voir le projet sur GitHub
+                </a>
               </p>
             </div>
           </div>
@@ -82,18 +96,36 @@ const ShowCase = () => {
                 />
               </div>
               <h2>Diagui Shop Web App</h2>
+              <p>
+                <a
+                  href="https://github.com/tounkaradiagui/diagui_shop-mobile-version"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline-none"
+                >
+                  Voir le projet sur GitHub
+                </a>
+              </p>
             </div>
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
                 <img
-                  src="/images/dashboard.png"
-                  alt="Dashboard Admin"
+                  src="/images/projet_wagadu.png"
+                  alt="Système de Gestion Scolaire avec Suivi des Absences"
                   title="Admin Dashborad View"
                 />
               </div>
-              <h2>
-                Projet de gestion des absences
-              </h2>
+              <h2>Projet de gestion des absences.</h2>
+              <p>
+                <a
+                  href="https://wagadu-initial-stage.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 underline-none"
+                >
+                  Voir le projet en ligne
+                </a>
+              </p>
             </div>
           </div>
         </div>

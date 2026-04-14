@@ -1,18 +1,18 @@
 const navLinks = [
   {
-    name: "Work",
+    name: "Réalisations",
     link: "#work",
   },
   {
-    name: "Experience",
+    name: "Expériences",
     link: "#experience",
   },
   {
-    name: "Skills",
+    name: "Compétences",
     link: "#skills",
   },
   {
-    name: "Testimonials",
+    name: "Témoignages",
     link: "#testimonials",
   },
 ];
@@ -29,7 +29,7 @@ const words = [
 ];
 
 const counterItems = [
-  { value: 5, suffix: "+", label: "Années d'Expérience" },
+  { value: 4, suffix: "+", label: "Années d'Expérience" },
   { value: 10, suffix: "+", label: "Clients Satisfaits" },
   { value: 20, suffix: "+", label: "Projets Réalisés" },
   { value: 99, suffix: "%", label: "Satisfaction Client" },
@@ -249,7 +249,6 @@ const testimonials = [
     imgPath: "/images/client6.png",
   },
 ];
-
 
 const socialImgs = [
   {
